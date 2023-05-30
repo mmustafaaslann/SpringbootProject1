@@ -20,8 +20,8 @@ public class AddressController {
     }
 
     @GetMapping("/{addressId}")
-    public Address getAddress(@PathVariable(name = "addressId") Long id) {
-        return addressService.get(id);
+    public Address getAddress(@PathVariable(name = "addressId") Long addressId) {
+        return addressService.get(addressId);
     }
 
     @PostMapping("/")

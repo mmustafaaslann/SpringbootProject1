@@ -30,7 +30,7 @@ public class AddressServiceImpl implements AddressService {
 
     @Override
     public Address get(Long id) {
-        return addressRepository.findById(id).get();
+            return addressRepository.findById(id).get();
     }
 
     @Override

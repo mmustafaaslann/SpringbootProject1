@@ -18,20 +18,17 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long userId;
 
-    @Column(name = "username")
-    private String username;
-
-    @Column(name = "password")
-    private String password;
-
     @Column(name = "first_name")
     private String firstName;
 
     @Column(name = "last_name")
     private String lastName;
 
+    @Column(name = "email")
+    private String email;
+
     @Column(name = "age")
-    private String age;
+    private int age;
 
     @Column(name = "gender")
     private String gender;
@@ -39,11 +36,10 @@ public class User {
     public User() {
     }
 
-    public User(String username, String password, String firstName, String lastName, String age, String gender) {
-        this.username = username;
-        this.password = password;
+    public User(String firstName, String lastName, String email, int age, String gender) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.email = email;
         this.age = age;
         this.gender = gender;
     }

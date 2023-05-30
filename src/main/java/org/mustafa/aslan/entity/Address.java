@@ -19,16 +19,15 @@ public class Address {
     private long addressId;
 
     @Column(name = "user_id")
-    private int userId;
+    private long userId;
 
     @Column(name = "district")
     private String district;
-
     @Column(name = "street")
     private String street;
 
     @Column(name = "number")
-    private int number;
+    private String number;
 
     @Column(name = "post_code")
     private String postCode;
@@ -36,7 +35,7 @@ public class Address {
     public Address() {
     }
 
-    public Address(int userId, String district, String street, int number, String postCode) {
+    public Address(long userId, String district, String street, String number, String postCode) {
         this.userId = userId;
         this.district = district;
         this.street = street;
